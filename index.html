@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueCompositionAPI Vue2 Demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vue/composition-api@1.2.4"></script>
+</head>
+<body>
+  <div id="hello-vue" class="demo">
+    {{ message }}
+  </div>
+<script>
+const HelloVueApp = VueCompositionAPI.defineComponent({
+  setup () {
+    return {
+      test: 99
+    }
+  },
+  data() {
+    return {
+      message: 'Hello Vue'
+    }
+  },
+})
+
+VueCompositionAPI.createApp(HelloVueApp).mount('#hello-vue')
+</script>
+</body>
+</html>
